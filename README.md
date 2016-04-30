@@ -1,7 +1,7 @@
 Froala editor extension for babrahams:editable-text package
 -----------------------------------------------------
 
-Example app: [http://editable-text-demo.meteor.com](http://editable-text-demo.meteor.com)
+Example app: [http://editable-text-demo.taonova.com](http://editable-text-demo.taonova.com)
 
 Example app repo: [https://github.com/JackAdams/editable-text-demo](https://github.com/JackAdams/editable-text-demo)
 
