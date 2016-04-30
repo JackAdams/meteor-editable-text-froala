@@ -1,9 +1,5 @@
-WYSIWYG extension for babrahams:editable-text package
+Froala editor extension for babrahams:editable-text package
 -----------------------------------------------------
-
-__Do not `meteor add babrahams:editable-text-wysiwyg`__
-
-This package just provides the base code when adding a wysiwyg widget to babarahams:editable-text. By itself it has no effect.
 
 Example app: [http://editable-text-demo.meteor.com](http://editable-text-demo.meteor.com)
 
@@ -11,17 +7,13 @@ Example app repo: [https://github.com/JackAdams/editable-text-demo](https://gith
 
 #### Quick Start
 
-	meteor add babrahams:editable-text-wysiwyg-bootstrap-3
+	meteor add babrahams:editable-text-froala
 	
-or
-
-    meteor add babrahams:editable-text-wysiwyg-bootstrap-2
-	
-(this package will get added automatically)
+(the Froala editor will get added automatically)
 
 You can then drop an editable text widget into any Blaze template as follows:
 
-	{{> editableText collection="posts" field="body" wysiwyg=true}}
+	{{> editableText collection="posts" field="body" editor="froala"}}
 	
 where "posts" is the name of the mongo collection and "body" is the name of a document field for the `posts` collection.
 
@@ -40,3 +32,31 @@ where `singlePostDocument` can be a single post document already set in the curr
 #### Documentation
 
 Read the [full documentation](https://github.com/JackAdams/meteor-editable-text#editable-text-for-meteor) for the `babrahams:editable-text` package at [https://github.com/JackAdams/meteor-editable-text](https://github.com/JackAdams/meteor-editable-text).
+
+Note: there is currently only limited support in this packages for the babrahams:editable-text API (it will be extended soon)
+
+You can set default Froala editor options for this widget using `EditableText.defaultFroalaOptions`. E.g.
+
+```
+EditableText.defaultFroalaOptions = {
+  enter: $.FroalaEditor.ENTER_DIV
+}
+```
+
+You can also set Froala editor options on a per-widget basis using `editorOptions=editorOptions` as a widget param, with this in a template helper:
+
+```
+Template.myTemplateWithEditorInIt.helpers({
+  editorOptions: function () {
+    return {
+	  enter: $.FroalaEditor.ENTER_DIV
+	};
+  }
+});
+```
+
+The `babrahams:editable-text` widget params that are supported (so far) with the Froala editor are: `class`, `style` and `acceptEmpty`.
+
+#### License
+
+This package is MIT licensed, but note that the Froala Editor (which is a dependency) has its own license. See: https://www.froala.com/wysiwyg-editor/terms
