@@ -9,7 +9,7 @@ Package.onUse(function(api) {
     
   api.versionsFrom('1.0');
   
-  api.use('babrahams:editable-text@0.8.11', 'client');
+  api.use('babrahams:editable-text@0.8.12', 'client');
   api.use('froala:editor-reactive@2.2.4', 'client');
   api.use('templating', 'client');
   api.use('blaze', 'client');
