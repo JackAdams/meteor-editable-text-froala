@@ -13,19 +13,19 @@ Example app repo: [https://github.com/JackAdams/editable-text-demo](https://gith
 
 You can then drop an editable text widget into any Blaze template as follows:
 
-	{{> editableText collection="posts" field="body" editor="froala"}}
+	{{> editableText collection="posts" field="text" editor="froala"}}
 	
-where "posts" is the name of the mongo collection and "body" is the name of a document field for the `posts` collection.
+where "posts" is the name of the mongo collection and "text" is the name of a field in documents from the `posts` collection.
 
-`collection` and `field` are mandatory fields.
+`collection` and `field` are mandatory parameters (and so is `editor="froala"` if you want the user to be able to edit the `text` field with the Froala editor).
 
-Note: The widget assumes that the data context is that of a single document from the `posts` collection (with _id value included).
+Note: The widget assumes that the data context is that of a single document from the `posts` collection (with an `_id` value included).
 
 You can also set the data context explicitly as follows:
 
     {{> editableText context=singlePostDocument collection="posts" field="body"}}
 
-where `singlePostDocument` can be a single post document already set in the current context, or provided by a template helper from the template that the widget was dropped into.
+where `singlePostDocument` can be a single document from the `posts` collection which is already set in the current context, or it can be provided by a template helper from the template that the widget was dropped into.
 
 (You can use `document`, `doc`, `object`, `obj`, `data` or `dataContext` instead of `context` - go with whichever you prefer.)
 
@@ -33,7 +33,9 @@ where `singlePostDocument` can be a single post document already set in the curr
 
 Read the [full documentation](https://github.com/JackAdams/meteor-editable-text#editable-text-for-meteor) for the `babrahams:editable-text` package at [https://github.com/JackAdams/meteor-editable-text](https://github.com/JackAdams/meteor-editable-text).
 
-Note: there is currently only limited support in this packages for the babrahams:editable-text API (it will be extended soon)
+Note: there is currently only limited support in this package for the babrahams:editable-text API (coverage will be extended soon)
+
+The `babrahams:editable-text` widget params that are supported (so far) with the Froala editor are: `class`, `style` and `acceptEmpty`.
 
 You can set default Froala editor options for this widget using `EditableText.defaultFroalaOptions`. E.g.
 
@@ -54,8 +56,6 @@ Template.myTemplateWithEditorInIt.helpers({
   }
 });
 ```
-
-The `babrahams:editable-text` widget params that are supported (so far) with the Froala editor are: `class`, `style` and `acceptEmpty`.
 
 #### License
 
