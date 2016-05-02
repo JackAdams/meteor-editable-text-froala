@@ -51,12 +51,12 @@ You can also set Froala editor options on a per-widget basis using `editorOption
 Template.myTemplateWithEditorInIt.helpers({
   editorOptions: function () {
     return {
-	  enter: $.FroalaEditor.ENTER_DIV
-	};
+      enter: $.FroalaEditor.ENTER_DIV
+    };
   }
 });
 ```
 
 #### License
 
-This package is MIT licensed, but note that the Froala Editor (which is a dependency) has its own license. See: https://www.froala.com/wysiwyg-editor/terms
+This package is MIT licensed, but note that the Froala Editor (which is a dependency) has its own license. See: [https://www.froala.com/wysiwyg-editor/terms](https://www.froala.com/wysiwyg-editor/terms)
