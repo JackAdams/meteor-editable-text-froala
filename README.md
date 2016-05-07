@@ -60,3 +60,5 @@ Template.myTemplateWithEditorInIt.helpers({
 #### License
 
 This package is MIT licensed, but note that the Froala Editor (which is a dependency) has its own license. See: [https://www.froala.com/wysiwyg-editor/terms](https://www.froala.com/wysiwyg-editor/terms)
+
+If you don't get a Froala licence then, in a production app, you'll just see "Unlicensed Froala Editor" in a red box instead of the editor.
