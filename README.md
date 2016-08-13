@@ -33,7 +33,7 @@ where `singlePostDocument` can be a single document from the `posts` collection 
 
 Read the [full documentation](https://github.com/JackAdams/meteor-editable-text#editable-text-for-meteor) for the `babrahams:editable-text` package at [https://github.com/JackAdams/meteor-editable-text](https://github.com/JackAdams/meteor-editable-text).
 
-Note: there is currently only limited support in this package for the babrahams:editable-text API (coverage will be extended soon)
+Note: there is currently only limited support in this package for the babrahams:editable-text API
 
 The `babrahams:editable-text` widget params that are supported (so far) with the Froala editor are: `class`, `style` and `acceptEmpty`.
 
