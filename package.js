@@ -1,7 +1,7 @@
 Package.describe({
   name: 'babrahams:editable-text-froala',
   summary: 'Add Froala editor to babrahams:editable-text',
-  version: '0.1.31',
+  version: '0.2.0',
   git: 'https://github.com/JackAdams/meteor-editable-text-froala'
 });
 
@@ -9,7 +9,7 @@ Package.onUse(function(api) {
     
   api.versionsFrom('1.0');
   
-  api.use('babrahams:editable-text@0.8.31', 'client');
+  api.use('babrahams:editable-text@0.9.0', 'client');
   api.use('froala:editor-reactive@2.4.0', 'client');
   api.use('templating', 'client');
   api.use('blaze', 'client');
